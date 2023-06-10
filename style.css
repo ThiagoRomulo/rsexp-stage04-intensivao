@@ -1,0 +1,245 @@
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-rosa: #b52184;
+  --color-azul: #312d64;
+  --color-azulHover: #26234d;
+  --color-branco: #ffffff;
+
+  --bg-page: #f9f4fb;
+  --bg-main: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+
+  --radius: 1.6rem;
+}
+
+body,
+input,
+button,
+textarea {
+  background: var(--bg-page);
+  font-family: "Mulish", sans-serif;
+}
+
+#page {
+  max-width: 39rem;
+  margin: 0 auto;
+}
+
+header {
+  padding: 0 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header > img {
+  width: 36.4rem;
+  margin-bottom: 1.7rem;
+}
+
+section {
+  display: grid;
+  justify-items: center;
+}
+
+section h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-rosa);
+}
+
+section p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-azul);
+}
+
+section img {
+  width: 6rem;
+  height: 10.5rem;
+  padding: 3rem 1.4rem;
+  border: 0.4rem solid var(--color-rosa);
+  border-radius: 99rem;
+
+  margin: 3.5rem 0 9.3rem;
+}
+
+main {
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  padding: 5.3rem 4rem;
+}
+
+.card {
+  background-color: var(--bg-page);
+  border-radius: var(--radius);
+  padding: 2.6rem;
+}
+
+.card img {
+  width: clamp(8rem, 10vw, 9.7rem);
+  height: clamp(8rem, 10vw, 9.7rem);
+}
+
+.card h2 {
+  font-size: clamp(3rem, 3vw, 3.5rem);
+  font-weight: 900;
+  color: var(--color-rosa);
+
+  margin: 3rem 0 1rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--color-azul);
+
+  padding-right: 3.4rem;
+}
+
+form {
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+form h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-rosa);
+
+  margin-bottom: 4.3rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 60rem;
+}
+
+input {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-azul);
+
+  border: 1px solid var(--color-azul);
+  border-radius: var(--radius);
+  padding: 1.2rem 5rem;
+}
+
+#user {
+  background-image: url("./images/person.png");
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  background-size: 2.4rem;
+}
+
+#email {
+  background-image: url("./images/at.png");
+  background-repeat: no-repeat;
+  background-position: 1rem;
+  background-size: 2.4rem;
+}
+
+textarea {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-azul);
+
+  border: 1px solid var(--color-azul);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.6rem;
+
+  height: 12.6rem;
+}
+
+button {
+  font-size: 1.4rem;
+  line-height: 2.4;
+  font-weight: 700;
+  color: var(--color-branco);
+
+  background-color: var(--color-azul);
+  padding: 1rem 1.6rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  width: 15.5rem;
+}
+
+button:hover {
+  background-color: var(--color-azulHover);
+}
+
+footer {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--color-branco);
+  background-color: var(--color-azul);
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  #page {
+    max-width: 144rem;
+  }
+
+  header {
+    padding: 0 3rem 10.3rem 11rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  header > img {
+    width: 72rem;
+    margin: 0;
+  }
+
+  section {
+    display: grid;
+    grid-template-rows: 55% 45%;
+    justify-items: start;
+    align-items: end;
+  }
+
+  section img {
+    margin: 0;
+    grid-area: 40%;
+  }
+
+  main {
+    flex-direction: row;
+    gap: 6rem;
+    padding: 6.4rem 11.1rem;
+  }
+
+  .card {
+    max-width: 36.6rem;
+    padding: 2.6rem 1.6rem 2.6rem 2.6rem;
+  }
+
+  .card p {
+    padding-right: 0;
+  }
+
+  form {
+    background-image: url(./images/estrelas.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
